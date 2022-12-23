@@ -9,3 +9,20 @@
   width: 500px;
   padding: 10px;
 }
+
+.DiaryEditor textarea {
+  height: 150px;
+}
+
+.DiaryEditor select {
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.DiaryEditor button {
+  width: 500px;
+  padding: 10px;
+  cursor: pointer;
+}
