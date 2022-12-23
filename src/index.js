@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import App from './App';
 import DiaryEditor from './DiaryEditor';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <DiaryEditor/>
+    <App>
+    </App>
   </React.StrictMode>
 );
 
