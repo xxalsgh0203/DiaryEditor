@@ -2,9 +2,6 @@ import { useState } from "react";
 
 const DiaryEditor = () => {
 
-    const [author, setAuthor] = useState("");
-    const [content, setContent] = useState("");
-
     const [state, setState] = useState({
         author: "",
         content: "",
