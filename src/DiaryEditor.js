@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 
-const DiaryEditor = () => {
+const DiaryEditor = ({onCreate}) => {
 
     const authorInput = useRef();
     const contentInput = useRef();
@@ -27,6 +27,13 @@ const DiaryEditor = () => {
             contentInput.current.focus();
             return;
         }
+
+        onCreate(state.author, state.content, state.emotion);
+
+        state.author = "";
+        state.content = "";
+        state.emotion = "happy";
+
         alert('저장완료!');
     }
 
@@ -46,7 +53,7 @@ const DiaryEditor = () => {
                     <option value="sad">sad</option>
                     <option value="mad">mad</option>
                     <option value="gloomy">gloomy</option>
-                    <option value="fighting">fighting</option>
+                    <option value="vigorous">vigorous</option>
                 </select>
             </div>
             <div>
