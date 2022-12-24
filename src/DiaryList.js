@@ -1,14 +1,14 @@
 import DiaryItem from "./DiaryItem";
 
-const DiaryList = ({diarylist}) => {
+const DiaryList = ({diaryList}) => {
     
     return (
         <div>
             <h2>일기 리스트</h2>
-            <h4>{diarylist.length} 개의 일기가 있습니다</h4>
+            <h4>{diaryList.length} 개의 일기가 있습니다</h4>
 
             {
-                diarylist.map((it)=>(
+                diaryList.map((it)=>(
                         <DiaryItem key={it.id} {...it}/>
 
                 ))
@@ -18,7 +18,7 @@ const DiaryList = ({diarylist}) => {
 };
 
 DiaryList.defaultProps={
-    diarylist:[],
+    diaryList:[],
 };
 
 export default DiaryList;
