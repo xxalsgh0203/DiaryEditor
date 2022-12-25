@@ -28,10 +28,14 @@ const App = () => {
     // console.log({targetID} + "가 삭제됨");
   }
 
+  const onEdit = (targetID, newContent) => {
+    setData(data.map((it) => it.id === targetID ? {...it, content: newContent} : it));
+  };
+
   return (
     <div className="App">
       <DiaryEditor onCreate = {onCreate}/>
-      <DiaryList onDelete = {onDelete} diaryList = {data}/>
+      <DiaryList onEdit = {onEdit} onDelete = {onDelete} diaryList = {data}/>
     </div>
   );
 }
